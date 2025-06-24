@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Reader",
+  "version": "1.0",
+  "description": "Reads name and experience from a LinkedIn profile.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.linkedin.com/in/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["*://www.linkedin.com/*"]
+}

@@ -43,12 +43,12 @@
 //   }
 // });
 function getProfileData() {
-  console.log("🚀 Extracting LinkedIn profile data...");
+  // console.log("Extracting LinkedIn profile data...");
 
   // Step 1: Extract the name
   const nameElement = document.querySelector('h1');
   const name = nameElement ? nameElement.textContent.trim() : 'Name not found';
-  console.log("✅ Name:", name);
+  console.log("Name:", name);
 
   const experience = [];
 
@@ -59,7 +59,7 @@ function getProfileData() {
   );
 
   if (!experienceSection) {
-    console.warn("⚠️ No experience section found.");
+    console.warn("No experience section found.");
     return { name, experience };
   }
 
@@ -79,7 +79,7 @@ function getProfileData() {
     }
   });
 
-  console.log("✅ Extracted experience:", experience);
+  console.log("Extracted experience:", experience);
   return { name, experience };
 }
 

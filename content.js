@@ -1,6 +1,5 @@
 function getProfileData() {
-  // console.log("Extracting LinkedIn profile data...");
-
+  
   // Extract the name
   const nameElement = document.querySelector('h1');
   const name = nameElement ? nameElement.textContent.trim() : 'Name not found';

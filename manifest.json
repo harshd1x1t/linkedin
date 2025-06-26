@@ -1,20 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "LinkedIn Profile Reader",
+  "name": "LinkedIn Profile Extractor",
   "version": "1.0",
-  "description": "Reads name and experience from a LinkedIn profile.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "tabs"],
   "action": {
-    "default_popup": "index.html",
-    "default_icon": {
-      "16": "icon.png"
-    }
+    "default_popup": "popup.html"
+    
   },
   "content_scripts": [
     {
-      "matches": ["*://www.linkedin.com/in/*"],
+      "matches": ["*://*.linkedin.com/*"],
       "js": ["content.js"]
     }
   ],
-  "host_permissions": ["*://www.linkedin.com/*"]
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "background": {
+    "service_worker": "content.js"
+  }
 }

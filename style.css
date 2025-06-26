@@ -1,0 +1,73 @@
+/* popup.css */
+
+:root {
+--primary-color: #0073b1; /* LinkedIn blue */
+--light-bg: #f3f6f8;
+--card-bg: #ffffff;
+--text-color: #1c1c1c;
+--muted-text: #555;
+--border-radius: 12px;
+--shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+font-family: "Segoe UI", sans-serif;
+background: var(--light-bg);
+margin: 0;
+padding: 15px;
+width: 320px;
+color: var(--text-color);
+}
+
+h2 {
+font-size: 16px;
+margin: 10px 0 5px;
+}
+
+button#extractBtn {
+width: 100%;
+background: var(--primary-color);
+color: white;
+border: none;
+padding: 10px 12px;
+font-size: 14px;
+border-radius: var(--border-radius);
+cursor: pointer;
+box-shadow: var(--shadow);
+transition: background 0.3s ease;
+}
+
+button#extractBtn:hover {
+background: #005f91;
+}
+
+#result {
+margin-top: 15px;
+}
+
+.section {
+background: var(--card-bg);
+padding: 10px;
+margin-bottom: 10px;
+border-radius: var(--border-radius);
+box-shadow: var(--shadow);
+}
+
+ul {
+list-style-type: disc;
+padding-left: 18px;
+margin: 0;
+}
+
+li {
+font-size: 14px;
+line-height: 1.4;
+margin: 4px 0;
+}
+
+.loading,
+.error {
+text-align: center;
+margin-top: 10px;
+color: var(--muted-text);
+}

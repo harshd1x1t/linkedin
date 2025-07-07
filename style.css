@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #0073b1;
+  --light-bg: #f3f6f8;
+  --card-bg: #ffffff;
+  --text-color: #1c1c1c;
+  --muted-text: #555;
+  --border-radius: 10px;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--light-bg);
+  margin: 0;
+  padding: 6px;
+  width: 320px;
+  height: auto;
+  overflow-y: auto;
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0 0 4px; /* reduced bottom margin */
+}
+
+p {
+  font-size: 13.5px;
+  margin: 0 0 6px; /* reduced vertical spacing */
+}
+
+button#extractBtn,
+button#submitBtn {
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+button#extractBtn:hover,
+button#submitBtn:hover {
+  background: #005f91;
+}
+
+#result {
+  word-break: break-word;
+  margin-top: 4px;
+}
+
+/* Accordion container */
+.accordion-item {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #ddd; /* optional separator */
+  background: transparent;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* Accordion header */
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-weight: 500;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 0;
+}
+
+.accordion-title {
+  flex: 1;
+  text-align: left;
+}
+
+.accordion-icon {
+  display: inline-block;
+  width: 16px;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when open */
+.accordion-header.open .accordion-icon {
+  transform: rotate(90deg);
+}
+
+/* Accordion content */
+.accordion-content {
+  padding: 4px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--card-bg);
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* List styles */
+ul {
+  list-style-type: disc;
+  padding-left: 14px;
+  margin: 2px 0;
+}
+
+li {
+  font-size: 12px;
+  line-height: 1.25;
+  margin: 1px 0;
+}
+
+/* Status/Error styling */
+.loading,
+.error {
+  text-align: center;
+  margin-top: 0;
+  font-size: 12px;
+  color: var(--muted-text);
+}
+
+.section {
+  background: var(--card-bg);
+  padding: 2px;
+  margin-bottom: 4px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}

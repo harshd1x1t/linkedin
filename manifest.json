@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Extractor",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+    
+  },
+"content_scripts": [
+  {
+    "matches": [
+      "*://*.linkedin.com/in/*",
+      "*://*.linkedin.com/in/*/overlay/contact-info/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }
+]
+
+}

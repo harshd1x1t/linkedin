@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { saveProfileData, getAllProfiles, getProfileByName } = require('../controllers/profileController');
 
-// New route to get a single profile by name
-router.get('/:name', getProfileByName);
+
 
 
 /**
@@ -54,5 +53,8 @@ router.post('/save', saveProfileData);
  *                     type: string
  */
 router.get('/all', getAllProfiles);
+
+// New route to get a single profile by name
+router.get('/:name', getProfileByName);
 
 module.exports = router;

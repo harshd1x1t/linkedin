@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { saveProfileData, getAllProfiles } = require('../controllers/profileController');
+const { saveProfileData, getAllProfiles, getProfileByName } = require('../controllers/profileController');
+
+// New route to get a single profile by name
+router.get('/:name', getProfileByName);
+
 
 /**
  * @swagger

@@ -433,5 +433,57 @@
       "Endorsed by 2 people in the last 6 months",
       "82 endorsements"
     ]
+  },
+  {
+    "name": "Venkatesh Mundra",
+    "openToWork": false,
+    "contact": {},
+    "experience": [
+      "Jr. Associate at Synechron · Full-time",
+      "Cloud Engineer - Intern at Teleglobal International · Internship"
+    ],
+    "education": [
+      "Bharati Vidyapeeth University College Of Engineering, Pune - Bachelor of Technology - BTech, Information Technology",
+      "Grade: 9.5",
+      "Shri Lal Bahadur Shastri SR SEC School - 12th, Science Maths(PCM) ",
+      "Grade: 94.2%"
+    ],
+    "skills": [
+      "AWS CloudFormation",
+      "Cloud Engineer - Intern at Teleglobal International ",
+      "Amazon ECS"
+    ]
+  },
+  {
+    "name": "Venkatesh Mundra",
+    "openToWork": false,
+    "contact": {},
+    "experience": [
+      "Jr. Associate at Synechron · Full-time",
+      "Cloud Engineer - Intern at Teleglobal International · Internship"
+    ],
+    "education": [
+      "Bharati Vidyapeeth University College Of Engineering, Pune - Bachelor of Technology - BTech, Information Technology",
+      "Grade: 9.5",
+      "Shri Lal Bahadur Shastri SR SEC School - 12th, Science Maths(PCM) ",
+      "Grade: 94.2%"
+    ],
+    "skills": [
+      "AWS CloudFormation",
+      "Cloud Engineer - Intern at Teleglobal International ",
+      "Amazon ECS"
+    ]
+  },
+  {
+    "name": "Yash Dixit",
+    "experience": "Developer",
+    "education": [
+      "B.Tech",
+      "MIT"
+    ],
+    "skills": [
+      "JavaScript",
+      "React"
+    ]
   }
 ]

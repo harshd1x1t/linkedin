@@ -30,20 +30,25 @@ exports.saveProfileData = (req, res) => {
   });
 };
 
-// 🔹 Get all saved profiles
+// Get all saved profiles
 exports.getAllProfiles = (req, res) => {
+  
   const allProfiles = Array.from(profiles.values());
   res.status(200).json(allProfiles);
 };
 
-// 🔹 Get a specific profile by name
+// Get a specific profile by name
 exports.getProfileByName = (req, res) => {
   const nameParam = req.params.name.toLowerCase().replace(/\s+/g, '_');
+  
 
   if (!profiles.has(nameParam)) {
+    console.log(`❌ Profile '${nameParam}' not found`);
     return res.status(404).json({ error: `Profile '${nameParam}' not found` });
   }
 
   const profile = profiles.get(nameParam);
   res.status(200).json(profile);
 };
+
+

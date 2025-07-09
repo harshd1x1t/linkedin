@@ -87,7 +87,7 @@ function extractEducation(section) {
     let degree = '';
 
     for (let i = 1; i < lines.length; i++) {
-      if (lines[i] !== school && !lines[i].toLowerCase().includes('missing the fun')) {
+      if (lines[i] !== school) {
         degree = lines[i];
         break;
       }

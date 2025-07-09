@@ -31,15 +31,26 @@ document.getElementById('submitBtn').addEventListener('click', () => {
     return;
   }
 
-  const blob = new Blob([JSON.stringify(extractedData, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const filename = `${(extractedData.name || "linkedin_profile").replace(/\s+/g, "_")}.json`;
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+  fetch("http://localhost:5000/api/profile/save/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer YOUR_API_KEY"
+    },
+    body: JSON.stringify(extractedData)
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Failed to save data");
+    return res.json();
+  })
+  .then(data => {
+    alert("✅ Data submitted successfully!");
+    console.log("Server response:", data);
+  })
+  .catch(err => {
+    console.error("❌ API error:", err);
+    alert("❌ Failed to submit data. Check the console.");
+  });
 });
 
 function renderResult(data) {

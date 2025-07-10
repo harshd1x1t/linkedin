@@ -44,7 +44,6 @@ async function clickAllShowMoreButtons() {
   }
 }
 
-// ✅ FIXED experience extraction function
 function extractExperience(section) {
   const experience = [];
   const roles = section.querySelectorAll('li');
@@ -121,54 +120,6 @@ function findSectionByKeyword(keyword) {
          allSections.find(s => s.querySelector('h2')?.innerText.toLowerCase().includes(keyword));
 }
 
-async function extractContactInfo() {
-  const contact = {};
-
-  // Detect if we are already on the overlay contact page
-  if (!window.location.href.includes("/overlay/contact-info")) {
-    const contactBtn = document.querySelector('a[data-control-name="contact_see_more"]');
-    if (!contactBtn) {
-      console.warn("Contact button not found.");
-      return contact;
-    }
-
-    contactBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    contactBtn.click();
-
-    // Wait for navigation to overlay page to complete
-    await wait(1500);
-  }
-
-  try {
-    // Wait for modal content to appear
-    await waitForElement('.pv-contact-info', 5000);
-    const container = document.querySelector('.pv-contact-info');
-
-    const sections = container.querySelectorAll('.pv-contact-info__contact-type');
-    sections.forEach(section => {
-      const label = section.querySelector('header')?.innerText?.trim().toLowerCase() || '';
-      const valueEl = section.querySelector('.pv-contact-info__contact-link, .t-14.t-black.t-normal');
-      const value = valueEl?.innerText?.trim() || valueEl?.href || '';
-
-      if (label && value) {
-        contact[label] = contact[label] || [];
-        contact[label].push(value);
-      }
-    });
-
-    // Also get birthday
-    const birthday = container.querySelector('.pv-contact-info__birthday span')?.innerText?.trim();
-    if (birthday) {
-      contact['birthday'] = [birthday];
-    }
-
-  } catch (err) {
-    console.error("Failed to extract contact info:", err);
-  }
-
-  return contact;
-}
-
 
 function detectOpenToWork() {
   return Array.from(document.querySelectorAll('div, span'))
@@ -187,14 +138,11 @@ async function scrapeLinkedInProfile(sendResponse) {
     const experienceSection = findSectionByKeyword("experience");
     const educationSection = findSectionByKeyword("education");
     const skillsSection = findSectionByKeyword("skills");
-
-    const contact = await extractContactInfo();
     const openToWork = detectOpenToWork();
 
     const profileData = {
       name,
       openToWork,
-      contact,
       experience: experienceSection ? extractExperience(experienceSection) : [],
       education: educationSection ? extractEducation(educationSection) : [],
       skills: skillsSection ? extractSkills(skillsSection) : []

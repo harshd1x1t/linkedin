@@ -37,13 +37,13 @@ This project streamlines the process of collecting data from LinkedIn profiles f
 
 linkedin-extension
 ª   structure.txt
-ª   
+   
 +---backend
     ª   package-lock.json
     ª   package.json
     ª   server.js
     ª   swagger.js
-    ª   
+    ª 
     +---controllers
     ª       profileController.js
     ª       
@@ -63,11 +63,7 @@ linkedin-extension
     +---test
             profile.test.js
 
-yaml
-Copy
-Edit
 
----
 
 ## 🚀 Getting Started
 

@@ -70,19 +70,26 @@ linkedin-extension/
 ### 1. Clone the Repository
 
 bash
+
 git clone https://github.com/your-username/linkedin-extractor-extension.git
+
 cd linkedin-extractor-extension
 
 ### 2. Install Backend Dependencies
+
 bash
+
 npm install
 
 ### 3. Start the Local Backend Server
 bash
+
 node server.js
+
   Backend will run on http://localhost:3000/
 
 ### 4. Load the Chrome Extension
+
 Open Chrome and go to chrome://extensions/
 
 Enable Developer Mode
@@ -104,5 +111,7 @@ Click the "Download JSON" button to save data locally.
 Swagger UI is available at:
 
 bash
+
 http://localhost:3000/api-docs
+
   Use it to view and test the backend API endpoints.

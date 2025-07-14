@@ -35,7 +35,7 @@ This project streamlines the process of collecting data from LinkedIn profiles f
 
 ## 🗂️ File Structure
 
-linkedin-extension/backend/
+linkedin-extension
 ª   structure.txt
 ª   
 +---backend

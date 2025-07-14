@@ -71,7 +71,7 @@ linkedin-extension/
 
 bash
 
-git clone 
+git clone https://github.com/harshd1x1t/linkedin.git
 
 cd linkedin-extractor-extension
 

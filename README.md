@@ -63,7 +63,7 @@ linkedin-extension/
     +---test
             profile.test.js
 
-
+```
 
 ## 🚀 Getting Started
 

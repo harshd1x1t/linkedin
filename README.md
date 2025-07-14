@@ -71,7 +71,7 @@ linkedin-extension/
 
 bash
 
-git clone https://github.com/your-username/linkedin-extractor-extension.git
+git clone 
 
 cd linkedin-extractor-extension
 
@@ -86,7 +86,7 @@ bash
 
 node server.js
 
-  Backend will run on http://localhost:3000/
+  Backend will run on http://localhost:5000
 
 ### 4. Load the Chrome Extension
 
@@ -112,6 +112,6 @@ Swagger UI is available at:
 
 bash
 
-http://localhost:3000/api-docs
+http://localhost:5000/api-docs
 
   Use it to view and test the backend API endpoints.

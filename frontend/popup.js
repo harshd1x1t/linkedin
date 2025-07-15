@@ -47,8 +47,8 @@ document.getElementById('submitBtn').addEventListener('click', () => {
 
     alert("✅ Profile saved locally to your system.");
   } else {
-    // ✅ Send to API
-    fetch("http://localhost:5000/api/profile/save", {
+    // ✅ Send to APIhttp://localhost:5000/api/profile/save
+    fetch("https://linkedin-agkf.onrender.com/api/profile/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
